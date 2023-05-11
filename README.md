@@ -49,7 +49,7 @@ With this we get the css selector of all reviews:
 ```bash
 [data-hook = "review"]
 ```
-![headers](https://github.com/pujjj/Scraping-Amazon-Reviews/assets/97466150/15b720fe-7955-40f1-9b02-099736f06396)
+![cssselectors](https://github.com/pujjj/Scraping-Amazon-Reviews/assets/97466150/5e566371-af3a-476a-b254-f9517651f778)
 
 ## Running the spider 
 To convert the scraped reviews to csv format:
