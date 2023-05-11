@@ -35,10 +35,28 @@ scrapy genspider reviews https://www.amazon.in/product-reviews/B08N5W4NNB
 This gives an empty spider python file - reviews.py
 
 ## Getting request headers of the product
-We inspect the page to get the request headers of the product 
+We inspect the page to get the request headers of the product and at it to settings.py
 ![reqheaders](https://github.com/pujjj/Scraping-Amazon-Reviews/assets/97466150/1efa1bd2-6ed0-4cb4-a2a5-13824f1a59b2)
 To convert the headers to a dictionary , first install scraper helper:
 ```bash
 pip install scraper-helper
 ```
 
+## Getting the css selectors of all the reviews
+For this purpose we can use a chrome extension - SelectorGadget which is a CSS Selector generation.
+
+With this we get the css selector of all reviews: 
+```bash
+[data-hook = "review"]
+```
+![headers](https://github.com/pujjj/Scraping-Amazon-Reviews/assets/97466150/15b720fe-7955-40f1-9b02-099736f06396)
+
+## Running the spider 
+To convert the scraped reviews to csv format:
+```bash
+scrapy crawl reviews -O reviews.csv
+```
+To convert reviews to json format:
+```bash
+scrapy crawl reviews -O reviews.json
+```
